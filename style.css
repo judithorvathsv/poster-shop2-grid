@@ -1,0 +1,230 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  background-color: black;
+}
+
+/* Header info: nav icon, title, ninja head */
+header {
+  grid-area: header;
+  background-color: rgb(61, 224, 126);
+  align-content: center;
+  grid-template-rows: 2rem 1fr 14rem;
+  grid-template-areas:
+    "navIcon"
+    "shopTitle"
+    "ninjaHead";
+}
+
+#navIcon {
+  grid-area: navIcon;
+  width: 2rem;
+  padding: 2rem;
+}
+
+header > h1 {
+  grid-area: shopTitle;
+  text-align: center;
+  padding: 2rem 2rem 0 2rem;
+  font-family: sans-serif;
+  font-size: 8rem;
+}
+
+#ninjaHead {
+  grid-area: ninjaHead;
+  height: 14rem;
+  width: 100%;
+  margin-bottom: -5px;
+}
+
+main {
+  grid-area: main;
+  background-color: black;
+  padding: 7rem 15% 0rem 15%;
+  align-items: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#titleSection {
+  color: white;
+  font-size: 2rem;
+}
+
+/* --- last two big items --- */
+#lastTwoItemSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.lastTwoItemsInfo {
+  color: black;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 70% 30%;
+  grid-template-areas:
+    "lastTwoPictures"
+    "lastTwoInfoContainer";
+}
+
+.lastTwoPictures {
+  grid-area: lastTwoPictures;
+  width: 100%;
+}
+
+.lastTwoInfoContainer {
+  grid-area: lastTwoInfoContainer;
+  padding: 1rem 1rem 0rem 1rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "lastTwoTitle"
+    "moneyLastTwoItems";
+}
+
+.lastTwoTitle {
+  grid-area: lastTwoTitle;
+  font-size: 2.5rem;
+}
+
+.moneyLastTwoItems {
+  grid-area: moneyLastTwoItems;
+  width: fit-content;
+  align-self: center;
+  background-color: rgb(232, 63, 87);
+  margin: 0rem 0 1.5rem 0rem;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  border-radius: 5px;
+  border: 1px solid rgb(232, 63, 87);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#cartSection {
+  margin-top: 7rem;
+  font-size: 2.5rem;
+  display: grid;
+  grid-template-areas: "cartTitle" "cartItem1" "cartItem2";
+  row-gap: 1.8rem;
+}
+
+#cartTitle {
+  grid-area: cartTitle;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: rgb(52, 8, 9);
+  color: rgb(230, 230, 230);
+  font-size: 2rem;
+}
+
+.cartItem1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 2.5rem;
+}
+
+.cartItem2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-size: 2.5rem;
+}
+
+.itemInfo {
+  width: 30vw;
+  text-align: start;
+}
+
+hr {
+  border: 1px solid white;
+  width: 100%;
+  margin: 1rem 0 1rem 0;
+}
+
+#total {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: white;
+  font-size: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+#total > span:nth-child(2) {
+  align-self: self-end;
+  text-align: end;
+}
+
+#gimmiButtonSection {
+  margin-bottom: 11rem;
+  margin-top: 10rem;
+  text-align: end;
+}
+
+#gimmiButtonSection > button {
+  background-color: rgb(232, 63, 87);
+  color: white;
+  font-size: 2.5rem;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 5px;
+  border: 1px solid rgb(232, 63, 87);
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  grid-area: footer;
+  color: white;
+  background-color: rgb(51, 51, 51);
+  height: 22rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#footerContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "navInfo"
+    "addressInfo"
+    "socialMediaInfo";
+  justify-content: space-around;
+  width: 80%;
+  padding: 4rem 15% 0rem 15%;
+}
+
+.footerItem {
+  display: grid;
+  grid-template-rows: 0.7fr 3fr;
+  grid-template-areas:
+    "footerColumnTitle"
+    "footerColumnInfo";
+}
+
+.footerItem > h2 {
+  grid-area: footerColumnTitle;
+  font-size: 2.5rem;
+}
+
+.footerInfo {
+  grid-area: footerColumnInfo;
+  color: rgb(223, 223, 223);
+}
+
+.footerInfoInRow {
+  display: grid;
+  grid-template-rows: repeat(3, 1.7rem);
+}
+
+#socialMediaItems {
+  justify-content: space-between;
+  margin-right: 2rem;
+}
+
+#socialMediaItems > img {
+  width: 1.7rem;
+}
